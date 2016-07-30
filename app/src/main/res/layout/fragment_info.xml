@@ -1,0 +1,205 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        tools:context="onworld.sbtn.fragments.homedetails.InfoFragment">
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/video_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/video_info_genre_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Genre: "
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info_title"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/video_info_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/video_info_national_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="National: "
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info_title"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/video_info_national"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textSize="@dimen/video_info" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/video_info_duration_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration: "
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info_title"
+                android:visibility="gone" />
+
+            <onworld.sbtn.views.MyTextRobotoCondensed
+                android:id="@+id/video_info_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/video_info_year_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Release Year: "
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info_title"
+                android:visibility="gone" />
+
+            <onworld.sbtn.views.MyTextRobotoCondensed
+                android:id="@+id/video_info_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/video_info_directors_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Directors: "
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info_title"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/video_info_directors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/video_info_actors_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actors: "
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info_title"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/video_info_actors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/video_info_tags_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tags: "
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info_title"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/video_info_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/video_info_description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info_title"
+                android:visibility="gone" />
+
+            <onworld.sbtn.views.MyTextRobotoCondensed
+                android:id="@+id/video_info_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/video_info" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+

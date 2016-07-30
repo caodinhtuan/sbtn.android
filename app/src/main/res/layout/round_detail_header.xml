@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/round_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Vong giau mat"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/start_votting_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Start: "
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/start_time_round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/start_votting_program"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/end_votting_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_votting_program"
+            android:layout_marginLeft="10dp"
+            android:text="End: "
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/end_time_round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_votting_program"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/end_votting_program"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/expandable_round_rule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_onworld_grey"
+        android:orientation="vertical" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensedBold
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="Rule:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:visibility="gone" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensed
+        android:id="@+id/round_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensedBold
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="Candidate List"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+</LinearLayout>

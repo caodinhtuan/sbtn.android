@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="list_background_pressed">#5EA2FD</color>
+    <color name="list_divider">#23141414</color>
+
+    <color name="actionbar_background">#FFFFFF</color>
+    <color name="navigation_drawer_text_title">#DEffffff</color>
+    <color name="common_blue">#5EA2FD</color>
+    <color name="navigation_drawer_panel">#5EA2FD</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#EEFF41</color>
+    <color name="border_grey">#666666</color>
+    <color name="primary_dark">#2196F3</color>
+    <color name="primary_light">#B3E5FC</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="ccl_mini_upcoming_background">@color/colorPrimary</color>
+
+    <color name="item_text_view">#000d11</color>
+
+    <!--New Define Colors-->
+    <color name="text_onworld_black">#94000000</color>
+    <color name="background_onworld_grey">#B6B6B6</color>
+
+    <color name="colorPrimary">#45bce2</color>
+    <color name="colorPrimaryDark">#0099cc</color>
+    <color name="colorAccent">#45bce2</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <!-- A light Holo shade of red -->
+    <color name="holo_red_light">#ffff4444</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="holo_red_dark">#ffcc0000</color>
+    <!-- A Holo shade of purple -->
+    <color name="holo_orange_light">#ffffbb33</color>
+    <!-- A dark Holo shade of orange -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <!-- A really bright Holo shade of gray -->
+    <color name="holo_gray_bright">#33CCCCCC</color>
+    <integer-array name="loading_background_colors">
+        <item>@color/holo_red_light</item>
+        <item>@color/holo_orange_light</item>
+        <item>@color/holo_green_light</item>
+        <item>@color/holo_blue_bright</item>
+    </integer-array>
+    <color name="textColorSecondary">#ffffff</color>
+
+    <color name="main_background">#000000</color>grey
+    <color name="main_background_grey">#50FAFAFA</color>
+    <color name="drawer_divider_white">#4DFFFFFF</color>
+    <color name="tab_title_grey">#cccccc</color>
+    <color name="drawer_divider_grey">#c1c1c1</color>
+    <color name="drawer_item_tint_color">#ff333333</color>
+    <color name="music_list_divider">#c1c1c1</color>
+    <color name="package_background">#f1f1f1</color>
+</resources>

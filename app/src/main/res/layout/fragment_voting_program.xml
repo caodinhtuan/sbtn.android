@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.onworld.fragments.homedetail.VotingProgramFragment">
+
+            <onworld.sbtn.views.FixedAspectRatioLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager_slide_voting_program"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </onworld.sbtn.views.FixedAspectRatioLinearLayout>
+
+            <onworld.sbtn.views.MyTextRobotoCondensedBold
+                android:id="@+id/title_program"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/navigation_drawer_panel"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/start_votting_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Start: "
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:visibility="invisible"
+
+                    />
+
+                <onworld.sbtn.views.MyTextRobotoCondensedBold
+                    android:id="@+id/start_time_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/start_votting_program"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/end_votting_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/start_votting_program"
+                    android:layout_marginLeft="10dp"
+                    android:text="End: "
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:visibility="invisible" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensedBold
+                    android:id="@+id/end_time_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/start_votting_program"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/end_votting_program"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/expandable_view_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_onworld_grey"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/round_view_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/voting_program_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+</RelativeLayout>
+
+
+

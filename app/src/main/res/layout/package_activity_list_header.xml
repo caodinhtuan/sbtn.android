@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <View
+        android:id="@+id/package_activity_header_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/textColorPrimary"
+        android:visibility="gone" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensedBold
+        android:id="@+id/package_activity_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/detail_text_title"
+        tools:text="Title" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensed
+        android:id="@+id/package_activity_header_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/home_text_title"
+        tools:text="Description" />
+
+</LinearLayout>

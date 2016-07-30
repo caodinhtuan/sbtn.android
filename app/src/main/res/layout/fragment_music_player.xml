@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/music_player_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailActivity">
+
+    <onworld.sbtn.views.musicplayerviews.MusicPlayerView
+        android:id="@+id/mpv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:buttonColor="@android:color/transparent"
+        app:progressEmptyColor="@android:color/transparent"
+        app:progressLoadedColor="@color/colorPrimary"
+        app:textColor="#80FFFFFF"
+        app:textSize="0dp" />
+
+    <LinearLayout
+        android:id="@+id/music_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/music_toolbar_title"
+            tools:text="Hello" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/music_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/video_info_description"
+            tools:text="Hello" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/music_fragment_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

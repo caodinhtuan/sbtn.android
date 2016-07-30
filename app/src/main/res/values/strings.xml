@@ -1,0 +1,186 @@
+<resources>
+    <string name="hint_email">email</string>
+    <string name="hint_username">username</string>
+    <string name="hint_password">password</string>
+    <string name="sbtn_license_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs7IToSWdjAmhpu5VVD6EXVhQ5NIyV94Im0F2Dp1KBWrWmK9Ay6BhU2vZ2PeRJcHsAz+mXIGs4BR+b5oBGdlttDAC3ANaqqVC+IZlG8acbCDpQ4pZbsfUkg2VslwhNntfwJGL6GO6jGprpP5DxJnZ30yEOgjlK7niZGGHUpkf+ODIIV8chSSGEI0sbLLkxWD2RV1lyWFNysi6uF3m8FdhivO0lDxSB6Yoprpl8ScHwpT6UaPpy5irAA+NvY7DVkUMXD9Q59TcdvniTc7AgCEpEV9+Rsf1Fvo49B2aFkHpM2WI8SMPOES+B+EEPCNq+ABfQ8dWViuTOBc4Sta3inflswIDAQAB</string>
+    <!--<string name="app_name">SBTN</string>-->
+    <string name="search_hint">Search</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_home_fragment">HomeFragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="recommendations_fragment">Hello Recommendations fragment</string>
+    <string name="recently_added_fragment">Hello Recently Added fragment</string>
+    <string name="popular_fragment">Hello Popular fragment</string>
+    <string name="hello_blank_fragment">Hello Home fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_detail_view_related">DetailViewRelated</string>
+
+    <string name="cast_app_name">GoogleCastPlayer</string>
+    <string name="media_route_menu_title">Play on&#8230;</string>
+    <string name="list_of_videos">Select a Video Clip</string>
+    <string name="casting_to_device">Casting to %1$s</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_device">(No Device Selected)</string>
+    <string name="error">Error</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="mute">Mute</string>
+    <string name="unmute">Unmute</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="no_video_found">No video was found</string>
+    <string name="about_app">About DemoCast Player</string>
+    <string name="version">CastVideos: %1$s, CCL: %2$s</string>
+    <string name="session_reconnection_attempt">Attempting to recover previous session&#8230;</string>
+
+    <!-- Error messages -->
+    <!-- onApplicationConnectionFailed() errors -->
+    <string name="failed_to_set_volume">Failed to set the volume</string>
+    <string name="failed_to_launch_app">Failed to launch application</string>
+    <string name="failed_to_set_mute">Failed to adjust the volume mute</string>
+    <string name="failed_to_find_app">The application you are trying to launch is not available on your Chromecast device</string>
+    <string name="failed_app_launch_timeout">The request to launch the application has timed out!</string>
+    <string name="failed_to_play">Failed to start the playback of media</string>
+    <string name="failed_to_pause">Failed to pause the playback of media</string>
+    <string name="failed_to_connect">Could not connect to the device</string>
+    <string name="failed_to_seek">Failed to seek to the specified position on the remote device</string>
+    <string name="video_error_media_load_timeout">Media loading timed out</string>
+    <string name="video_error_server_unaccessible">Media server was not reachable</string>
+    <string name="video_error_unknown_error">Failed to load video</string>
+    <string name="connection_temp_lost">Connection to the cast device is temporarily lost</string>
+    <string name="connection_recovered">Connection to the cast device is recovered</string>
+    <string name="connection_lost_retry">Connection to the cast device has been temporarily lost. Application is trying to recover connection, please try again later</string>
+    <string name="connection_lost">No connection to the cast device exist</string>
+    <string name="failed_to_perform_action">Sorry, ran into issues performing the task you wanted</string>
+    <string name="oops">Oops</string>
+
+    <!-- Preferences -->
+    <string name="prefs_header_application">Application Behavior</string>
+    <string name="prefs_header_application_summary">Control how the application behaves on the TV</string>
+    <string name="prefs_termination_policy_default">0</string>
+    <string name="prefs_termination_policy_dialog_title">When Disconnecting</string>
+    <string name="prefs_volume_title">Volume Assignment</string>
+    <string name="prefs_volume_title_summary">Controls %1$s</string>
+    <string name="prefs_volume_dialog_title">Volume Assignment</string>
+    <string name="prefs_volume_default">device</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <!-- Tabs -->
+    <string name="tab_videos_title">Videos</string>
+    <string name="tab_music_title">Songs</string>
+    <string name="tab_photos_title">Photos</string>
+
+    <!-- ShowCaseView -->
+    <string name="touch_to_cast">Touch to cast videos to your TV</string>
+
+    <!-- Captions -->
+    <string name="captions_settings">Captions Settings</string>
+    <string name="captions">Captions</string>
+
+    <!-- Queue -->
+    <string name="show_queue">Show Queue</string>
+    <string name="queue_list">Queue</string>
+    <string name="transition_image">transition-image</string>
+    <string name="queue_empty">Queue is empty!</string>
+    <string name="queue_tag_item">queue-tag-item</string>
+    <string name="play_now">Play Now</string>
+    <string name="play_next">Play Next</string>
+    <string name="add_to_queue">Add to Queue</string>
+    <string name="action_clear_queue">Clear Queue</string>
+    <string name="queue_item_added_to_play_next">An item was added to play next</string>
+    <string name="queue_item_added_to_queue">An item was added to the queue</string>
+    <string name="title_activity_show_detail">ShowDetailActivity</string>
+    <string name="title_activity_searchable">SearchableActivity</string>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
+
+    <string name="enable_background_audio">Play in background</string>
+
+    <string name="video">Video</string>
+
+    <string name="audio">Audio</string>
+
+    <string name="text">Text</string>
+
+    <string name="logging">Logging</string>
+
+    <string name="logging_normal">Normal</string>
+
+    <string name="logging_verbose">Verbose</string>
+
+    <string name="retry">Retry</string>
+
+    <string name="off">[off]</string>
+
+    <string name="on">[on]</string>
+
+    <string name="drm_error_not_supported">Protected content not supported on API levels below 18</string>
+
+    <string name="drm_error_unsupported_scheme">This device does not support the required DRM scheme</string>
+
+    <string name="drm_error_unknown">An unknown DRM error occurred</string>
+
+    <string name="failed">Playback failed</string>
+    <string name="language_of_content">Select Language Of Content</string>
+    <string name="title_activity_change_language_of_content">ChangeLanguageOfContent</string>
+
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="app_id">750809358388874</string>
+    <string name="hint_name">Full Name</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_password">Password min length is 6</string>
+    <string name="err_msg_password_signin">Password is not empty</string>
+    <string name="err_msg_password_match">Password is not match</string>
+    <string name="msg_cannot_vote_anymore">You had used all your votes.</string>
+    <string name="msg_vote_confirm">Voting for</string>
+    <string name="msg_signup_success">The account was registered successfully. Please check your email to activate your account.</string>
+    <string name="title_failed_to_signup">Failed to sign up.</string>
+    <string name="title_failed_to_login">Failed to login.</string>
+    <string name="text_button_close">CLOSE</string>
+    <string name="msg_no_internet_connection">No internet connection. Please check your connection settings and try again.</string>
+    <string name="msg_device_voted">This candidate was voted by this device</string>
+    <string name="msg_signin_before_vote">You need to login to continue.</string>n
+    <string name="msg_sign_in_to_view_content">You need to log in to view contents</string>
+    <string name="msg_buy_package">You need to buy package to view contents.</string>
+    <string name="msg_package_limit_device">Your Account is limited Device.</string>
+    <string name="msg_vote_successfully">Voted successfully.</string>
+    <string name="msg_server_error_sign_in">Cannot Login, Please try again later </string>
+    <string name="msg_server_error_sign_up">Cannot Signup, Please try again later </string>
+
+    <string name="header">Header</string>
+    <string name="title_activity_assearch">ASSearchActivity</string>
+    <string name="title_activity_asdetail">ASDetailActivity</string>
+    <string name="title_activity_music_player">MusicPlayer</string>
+
+    <string name="error_no_metadata">Unable to retrieve metadata.</string>
+    <string name="favorite">Favorite</string>
+    <string name="error_loading_media">Error Loading Media</string>
+    <string name="msg_play_timeline_when_play_ads">Please, waiting a minute when Ads is playing...</string>
+    <string name="cast_application_id">1DCE2321</string>
+    <string name="title_activity_pakage">PakageActivity</string>
+    <string name="package_title_button_buy">Purchase Now</string>
+    <string name="package_title_button_addcode">Redeem Code</string>
+    <string name="package_title_button_bought">Purchased</string>
+    <string name="package_title_button_addedcode">Redeemed Code</string>
+    <string name="title_activity_package_detail">PackageDetailActivity</string>
+    <string name="msg_force_update_new_app_version">You need to update new version to continue using this App.</string>
+    <string name="title_update_new_app_version">Update App</string>
+
+</resources>

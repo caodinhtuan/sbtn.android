@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/image_start_app"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon_app"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/language_activity_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/icon_app" />
+
+        <TextView
+            android:id="@+id/select_en"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="2dp"
+            android:text="@string/language_of_content"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:textAppearance="@android:style/TextAppearance.Large"
+
+            />
+
+        <TextView
+            android:id="@+id/nextBtn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+</RelativeLayout>

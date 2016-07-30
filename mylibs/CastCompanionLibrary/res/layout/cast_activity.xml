@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ccl_cast_activity_background_color"
+    tools:context=".cast.player.VideoCastControllerActivity">
+
+    <ImageView
+        android:id="@+id/pageview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitCenter" />
+
+    <com.google.android.libraries.cast.companionlibrary.widgets.MiniController
+        android:id="@+id/miniController1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="-6dp"
+        android:background="@drawable/cast_player_bg_gradient_light">
+
+        <LinearLayout
+            android:id="@+id/adv_time_play_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/controllers"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This add will close in "
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_adv_time_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/adv_skip_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textview1"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_skip_adv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip ad"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btn_skip_adv"
+                android:layout_width="70dp"
+                android:layout_height="22dp"
+                android:layout_alignBottom="@+id/text_skip_adv"
+                android:layout_toRightOf="@+id/text_skip_adv"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_skip" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/controllers"
+            android:layout_width="fill_parent"
+            android:layout_height="128dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/playback_controls"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/progressbar_controls">
+
+                <ImageButton
+                    android:id="@+id/play_pause_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_play_circle_white_80dp" />
+
+                <ImageButton
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/play_pause_toggle"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/skip_next_button" />
+
+                <ImageButton
+                    android:id="@+id/previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/play_pause_toggle"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/skip_previous_button" />
+
+                <ImageButton
+                    android:id="@+id/cc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/cc" />
+
+                <TextView
+                    android:id="@+id/live_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/play_pause_toggle"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/ccl_live"
+                    android:textColor="@color/ccl_cast_activity_text_color"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/progressbar_controls"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:id="@+id/start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="00:00"
+                    android:textColor="@color/ccl_cast_activity_text_color" />
+
+                <TextView
+                    android:id="@+id/end_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/image_karaoke"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="0:00"
+                    android:textColor="@color/ccl_cast_activity_text_color" />
+
+                <ImageView
+                    android:id="@+id/image_karaoke"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/karaoke_blue"
+                    android:visibility="gone" />
+
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/end_text"
+                    android:layout_toRightOf="@+id/start_text" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textview2"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/ccl_cast_activity_progress_text_color" />
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/controllers"
+            android:layout_marginBottom="20dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/ccl_cast_activity_progress_text_color" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:src="@drawable/logo_app" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+</RelativeLayout>

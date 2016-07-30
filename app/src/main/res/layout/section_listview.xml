@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/section_layout"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/section_listview_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:textColor="@color/navigation_drawer_panel"
+        android:textSize="14sp"
+        android:visibility="visible"
+        tools:text="abc" />
+
+</LinearLayout>

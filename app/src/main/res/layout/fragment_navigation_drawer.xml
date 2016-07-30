@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_list_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textColorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:paddingLeft="10dp"
+            android:scaleType="fitCenter"
+
+            />
+
+        <TextView
+            android:id="@+id/acount_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="1dp"
+            android:layout_toRightOf="@id/image_avatar"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:text="nguyenduylinh1402"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/acount_info" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/drawer_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_header_container"
+        android:background="@color/navigation_drawer_panel"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="1dp" />
+
+
+</RelativeLayout>

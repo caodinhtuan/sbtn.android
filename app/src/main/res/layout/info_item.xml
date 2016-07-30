@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="3dp"
+    android:layout_marginRight="3dp"
+    android:orientation="vertical">
+
+    <onworld.sbtn.views.MyTextRobotoCondensed
+        android:id="@+id/video_info_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_border_grey_color"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/video_info"
+        tools:text="romance" />
+</LinearLayout>

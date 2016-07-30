@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/package_layout_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="3dp"
+    android:background="@color/package_background"
+    android:orientation="horizontal"
+    android:padding="6dp">
+
+    <ImageView
+        android:id="@+id/package_thumb"
+        android:layout_width="@dimen/package_value_text"
+        android:layout_height="@dimen/package_value_text"
+        android:background="@color/package_background"
+        android:gravity="center"
+        tools:src="@drawable/icon_app" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/package_background"
+        android:orientation="vertical"
+        android:paddingLeft="5dp">
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/package_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/package_background"
+            android:textSize="@dimen/detail_text_header"
+            tools:text="Title" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/package_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/package_name"
+            android:background="@color/package_background"
+            android:textSize="@dimen/detail_text_title"
+            tools:text="Description" />
+
+        <EditText
+            android:id="@+id/package_input_code"
+            android:layout_width="@dimen/package_edittext_code_space"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/package_description"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_border_main_color"
+            android:hint="Enter Code"
+            android:maxLines="1"
+            android:nextFocusLeft="@id/package_input_code"
+            android:nextFocusUp="@id/package_input_code"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/detail_text_header" />
+
+        <Button
+            android:id="@+id/package_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/package_input_code"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"
+            tools:text="Buy" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/package_item_child_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/package_buy"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</LinearLayout>

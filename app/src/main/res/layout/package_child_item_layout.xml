@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/package_detail_header_child_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="3dp"
+    android:background="@color/main_background"
+    android:orientation="horizontal"
+    android:padding="6dp">
+
+    <ImageView
+        android:id="@+id/package_detail_header_child_thumb"
+        android:layout_width="@dimen/package_value_text"
+        android:layout_height="@dimen/package_value_text"
+        android:background="@color/main_background"
+        android:gravity="center"
+        tools:src="@drawable/icon_app" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/main_background"
+        android:paddingLeft="10dp">
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/package_detail_header_child_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/main_background"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/detail_text_header"
+            tools:text="Title" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/package_detail_header_child_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/package_detail_header_child_name"
+            android:background="@color/main_background"
+            android:ellipsize="end"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="16sp"
+            tools:text="Description" />
+
+        <Button
+            android:id="@+id/package_detail_header_child_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/package_detail_header_child_description"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/package_type_label_shape"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            tools:text="Buy" />
+
+        <EditText
+            android:id="@+id/package_detail_header_child_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/package_detail_header_child_description"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/package_detail_header_child_buy"
+            android:background="@drawable/shape_border_main_color"
+            android:hint="Enter Code"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="@color/textColorPrimary"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

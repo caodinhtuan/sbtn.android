@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/bought_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/recyclerview_padding" />
+
+    <LinearLayout
+        android:id="@+id/bought_layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/bought_text_tempty"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/packge_no_content"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bought_buy_content"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_border_main_color"
+            android:text="@string/package_title_button_buy"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/bought_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

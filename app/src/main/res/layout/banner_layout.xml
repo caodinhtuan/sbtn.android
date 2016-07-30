@@ -1,0 +1,13 @@
+<onworld.sbtn.views.FixedAspectRatioLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/banner_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/recyclerview_home_header_margin"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <onworld.sbtn.infinitepager.AutoScrollViewPager
+        android:id="@+id/auto_scroll_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</onworld.sbtn.views.FixedAspectRatioLinearLayout>

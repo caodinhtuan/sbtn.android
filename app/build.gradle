@@ -1,0 +1,306 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        releasesbtn {
+            keyAlias 'sbtn'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('sbtn.jks')
+        }
+        releasenailandbeauty {
+            keyAlias 'nail'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('nailandbeauty.jks')
+        }
+        releaseasia {
+            keyAlias 'asia'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('asia.jks')
+        }
+        releasevstar {
+            keyAlias 'vstar'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('vstar.jks')
+        }
+        releaselatino {
+            keyAlias 'latino'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('latino.jks')
+        }
+        releaseonasia {
+            keyAlias 'onasia'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('onasia.jks')
+        }
+        releasebyn {
+            keyAlias 'byn'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('byn.jks')
+        }
+        releasentm {
+            keyAlias 'ntm'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('ntm.jks')
+        }
+        releasesgn {
+            keyAlias 'sgn'
+            keyPassword 'onworld'
+            storePassword 'onworld'
+            storeFile file('sgn.jks')
+        }
+
+        debug {
+            //storeFile rootProject.file("debug.keystore")
+            storeFile file('debug.keystore')
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    defaultConfig {
+        applicationId "onworld.sbtn"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 12
+        versionName "1.2.6"
+        renderscriptTargetApi 20
+        renderscriptSupportModeEnabled true
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(
+                    output.outputFile.parent,
+                    output.outputFile.name.replace(".apk", "-${variant.versionName}.apk"))
+        }
+    }
+
+    buildTypes {
+
+        def BOOLEAN = "boolean"
+        def TRUE = "true"
+        def FALSE = "false"
+        def ENABLE_LOG = "ENABLE_LOG"
+
+        releasesbtn {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releasesbtn
+        }
+
+        releasenailandbeauty {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releasenailandbeauty
+        }
+        releaseasia {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releaseasia
+        }
+        releaseonasia {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releaseonasia
+        }
+        releasevstar {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releasevstar
+        }
+        releasealatino {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releaselatino
+        }
+        releasebyn {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releasebyn
+        }
+        releasentm {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releasentm
+        }
+        releasesgn {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, ENABLE_LOG, FALSE
+            signingConfig signingConfigs.releasesgn
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            buildConfigField BOOLEAN, ENABLE_LOG, TRUE
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    variantFilter { variant ->
+        def names = variant.flavors*.name
+
+        if (names.contains("dev") && variant.buildType.name.contains("Release")) {
+            variant.setIgnore(true);
+        }
+
+        if (names.contains("ASIA") && !variant.buildType.name.contains("ASIA")) {
+            variant.setIgnore(true);
+        }
+
+        if (names.contains("SBTN") && !variant.buildType.name.contains("SBTN")) {
+            variant.setIgnore(true);
+        }
+    }
+
+    productFlavors {
+        def SERVICE_URL_BASE = "BASE_SERVICE_URL"
+        def SERVICE_URL_VERSION_CODE = "SERVICE_URL_VERSION_CODE"
+        def SERVICE_URL_APP_NAME = "SERVICE_URL_APP_NAME"
+        def SERVICE_URL_FORGOT_PASS = "SERVICE_URL_FORGOT_PASS"
+        def STRING = "String"
+        def STRING_low = "string"
+        def APP_NAME = "app_name"
+        def VERSION_NAME = "1.0.0"
+        def VERSION_CODE = 1
+
+        sbtn {
+            applicationId "onworld.sbtn"
+            versionName VERSION_NAME
+            versionCode 1
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"sbtn/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "SBTN"
+        }
+        nail {
+            applicationId "onworld.nailandbeauty"
+            versionName VERSION_NAME
+            versionCode VERSION_CODE
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"nail/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "Nail & Beauty Channel"
+
+        }
+        asia {
+            applicationId "onworldtv.asia"
+            versionName VERSION_NAME
+            versionCode VERSION_CODE
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"asia/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "ASIA"
+
+        }
+        onasia {
+            applicationId "onworldtv.onasia"
+            versionName VERSION_NAME
+            versionCode VERSION_CODE
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"onasia/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "ONASIA"
+
+        }
+        vstar {
+            applicationId "onworldtv.vstar"
+            versionName VERSION_NAME
+            versionCode VERSION_CODE
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"vstar/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "VSTAR"
+
+        }
+        latino {
+            applicationId "onworldtv.latino"
+            versionName VERSION_NAME
+            versionCode VERSION_CODE
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"latino/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "LATINO"
+
+        }
+        byn {
+            applicationId "onworldtv.byn"
+            versionName VERSION_NAME
+            versionCode VERSION_CODE
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"sbtn/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "BYN"
+
+        }
+        ntm {
+            applicationId "onworldtv.ntm"
+            versionName VERSION_NAME
+            versionCode VERSION_CODE
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"ntm/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "NTM"
+
+        }
+        sgn {
+            applicationId "onworldtv.sgn"
+            versionName VERSION_NAME
+            versionCode VERSION_CODE
+            buildConfigField STRING, SERVICE_URL_BASE, "\"http://ottapi.com/\""
+            buildConfigField STRING, SERVICE_URL_VERSION_CODE, "\"v1.7/\""
+            buildConfigField STRING, SERVICE_URL_APP_NAME, "\"sgn/\""
+            buildConfigField STRING, SERVICE_URL_FORGOT_PASS, "\"http://sbtnapp.com/en/user/forgot_password\""
+            resValue STRING_low, APP_NAME, "DONGCONG"
+
+        }
+    }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':CastCompanionLibrary')
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.amlcurran.showcaseview:library:5.0.0'
+    compile 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.6.1'
+    compile 'com.google.android.exoplayer:exoplayer:r1.4.2'
+    compile 'com.android.support:support-v4:22.2.1'
+    compile 'com.google.android.gms:play-services-plus:8.1.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.5.0'
+    compile 'com.inthecheesefactory.thecheeselibrary:stated-fragment-support-v4:0.10.0'
+    compile 'com.commit451:PhotoView:1.2.4'
+    compile 'com.android.support:design:22.2.1'
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.0.1'
+    compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.pkmmte.view:circularimageview:1.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:cardview-v7:22.2.1'
+}

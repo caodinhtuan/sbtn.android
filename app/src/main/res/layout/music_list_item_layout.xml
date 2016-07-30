@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/music_list_height">
+
+    <ImageView
+        android:id="@+id/thumbnail_music_list_item"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/media_item_icon_margin_start"
+        android:src="@drawable/ic_play_arrow_white_36dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/music_order_number"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/media_item_icon_margin_start"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/media_item_text_margin_start"
+        android:orientation="vertical">
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/title_music_list_item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            tools:text="The Best Music EVAH1111 FOREVER YOUNG I'M AWESOME!!!11^H^H" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/music_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorSecondary"
+            android:visibility="gone"
+            tools:text="John Doe, his brothers, his sisters, his pets and his more than amazing band" />
+
+    </LinearLayout>
+
+</RelativeLayout>

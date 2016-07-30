@@ -1,0 +1,213 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:activatedBackgroundIndicator">@drawable/list_selector</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="item_img_view">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_height">135dp</item>
+    </style>
+
+    <style name="item_text_view">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:lines">2</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/item_text_view</item>
+    </style>
+
+    <style name="categories_item_lable">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">9dp</item>
+        <item name="android:paddingRight">9dp</item>
+        <item name="android:textSize">27dp</item>
+        <item name="android:textColor">@color/navigation_drawer_text_title</item>
+    </style>
+
+    <style name="commonListItemStyle">
+        <item name="android:translationZ">@dimen/list_item_translation_z</item>
+    </style>
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+    <!-- -->
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyMaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MyMaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ASAppTheme.TransparentStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="fillColor">@color/colorPrimary</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="radius">5dp</item>
+        <item name="centered">true</item>
+    </style>
+
+    <style name="ASAppTheme.TransparentStatusBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ASAppTheme.TransparentStatusBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ASAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ASAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ASAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyCustomToolBarTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="RootTheme" parent="android:Theme.Holo"></style>
+
+    <style name="PlayerTheme" parent="@style/RootTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="DemoButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">40dp</item>
+    </style>
+
+    <style name="MyMaterialCastPlayerTheme" parent="MyMaterialCastPlayerTheme.Base">
+
+    </style>
+
+    <style name="MyMaterialCastPlayerTheme.Base" parent="Theme.AppCompat">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="ThemeDialog">
+        <item name="android:width">600dip</item>
+        <item name="android:height">60dip</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="login_input">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">27dp</item>
+        <item name="android:layout_marginRight">27dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:paddingLeft">9dp</item>
+        <item name="android:paddingRight">9dp</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="login_title">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginLeft">27dp</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MyCustomTabLayoutTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:textColorSecondary">@color/tab_title_grey</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/green</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTabText</item>
+        <item name="tabSelectedTextColor">@color/colorPrimary</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/tab_text_title</item>
+        <item name="android:textColor">@color/tab_title_grey</item>
+
+    </style>
+
+
+    <style name="MyTransparentToolBarTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/common_blue</item>
+        <item name="colorPrimary">@color/holo_red_dark</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+
+    </style>
+
+    <style name="YourAppTheme.Light.ActionBar.Transparent" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="YourAppTheme.TransparentActionBar.Light" parent="@style/MyMaterialTheme">
+        <item name="android:actionBarStyle">@style/YourAppTheme.Light.ActionBar.Transparent</item>
+        <item name="actionBarStyle">@style/YourAppTheme.Light.ActionBar.Transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="AppDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="windowNoTitle">true</item>
+        <item name="android:background">@color/white</item>
+        //Your custom background color
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+</resources>

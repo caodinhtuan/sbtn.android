@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <onworld.sbtn.views.MyTextRobotoCondensedBold
+        android:id="@+id/title_votting_program"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginLeft="10dip"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/img_episode_list_thumnail"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="15dip"
+        android:layout_marginLeft="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensed
+        android:id="@+id/description_voting_program"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/start_votting_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Start: "
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/date_start_votting_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/start_votting_program"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/end_votting_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_votting_program"
+            android:layout_marginLeft="10dp"
+            android:text="End: "
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/date_end_votting_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start_votting_program"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/end_votting_program"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btn_detail_vote"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:text="MORE"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

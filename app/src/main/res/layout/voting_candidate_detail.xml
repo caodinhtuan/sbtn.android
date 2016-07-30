@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:src="@drawable/logo_app" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="ON WORLD TV"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/photo_container"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager_slide_voting_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/video_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+
+        <VideoView
+            android:id="@+id/videoView1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/adv_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/adv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitStart"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/adv_close_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/adv_image"
+                android:scaleType="fitStart"
+                android:src="@mipmap/as_close_image_adv"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/videoView1"
+            android:layout_alignLeft="@+id/videoView1"
+            android:layout_alignRight="@+id/videoView1"
+            android:layout_alignTop="@+id/videoView1">
+
+            <ImageView
+                android:id="@+id/coverArtView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/play_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/play_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/controllers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/videoView1"
+            android:layout_alignLeft="@+id/videoView1"
+            android:layout_alignRight="@+id/videoView1"
+            android:layout_alignTop="@+id/videoView1"
+            android:background="@drawable/player_bg_gradient_dark"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/adv_time_play_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This add will close in "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/text_adv_time_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/adv_skip_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/control_bar"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_skip_adv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skip ad"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btn_skip_adv"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_alignBottom="@+id/text_skip_adv"
+                    android:layout_toRightOf="@+id/text_skip_adv"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_skip" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/control_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_av_pause_dark" />
+
+                <TextView
+                    android:id="@+id/startText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="00:00"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/endText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@+id/image_full_screen"
+                    android:layout_toStartOf="@+id/image_full_screen"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="0:00"
+                    android:textColor="@color/white" />
+
+                <SeekBar
+                    android:id="@+id/seekBar1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/endText"
+                    android:layout_toRightOf="@+id/startText" />
+
+                <ImageView
+                    android:id="@+id/image_full_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_action_full_screen" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_container"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/info_video_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <onworld.sbtn.views.MyTextRobotoCondensedBold
+                    android:id="@+id/txt_title_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/vote_number_from_user"
+                    android:layout_toStartOf="@+id/vote_number_from_user"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/navigation_drawer_panel"
+                    android:textSize="20sp" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/vote_number_from_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/btn_vote_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_toLeftOf="@+id/btn_vote_content"
+                    android:textColor="@color/navigation_drawer_panel"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn_vote_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_shape"
+                    android:text="Vote"
+                    android:textColor="@color/white"
+
+                    />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/title_program"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_title_video"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/btn_vote_content"
+                    android:layout_toStartOf="@+id/btn_vote_content"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/audio_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_video_layout"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/audio_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="mp3 version"
+                    android:textStyle="italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/audio_play_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/audio_title"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_av_play_light" />
+
+                    <TextView
+                        android:id="@+id/start_time_audio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@id/audio_title"
+                        android:layout_toRightOf="@+id/audio_play_pause"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="00:00"
+                        android:textColor="#94000000" />
+
+
+                    <SeekBar
+                        android:id="@+id/audio_seekbar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/audio_title"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/end_time_audio"
+                        android:layout_toRightOf="@+id/start_time_audio"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/end_time_audio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@id/audio_title"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/btn_audio_download"
+                        android:layout_toStartOf="@+id/btn_audio_download"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="0:00"
+                        android:textColor="#94000000" />
+
+                    <Button
+                        android:id="@+id/btn_audio_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/audio_title"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_shape"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_action_full_screen"
+                        android:text="10$"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/candidate_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audio_container"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:id="@+id/line_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/divider" />
+
+                <ImageView
+                    android:id="@+id/candidate_avata"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/line_divider"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp" />
+
+                <View
+                    android:id="@+id/line_divider_center"
+                    android:layout_width="1dp"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/candidate_avata"
+                    android:background="@color/divider" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line_divider"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/line_divider_center"
+                    android:text="Name: "
+                    android:textSize="17sp"
+                    android:textStyle="italic" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensedBold
+                    android:id="@+id/name_candidate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line_divider"
+                    android:layout_toRightOf="@id/name_title"
+                    android:maxLines="2"
+                    android:textSize="18sp" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/dob_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_candidate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/line_divider_center"
+                    android:text="D.O.B: "
+                    android:textSize="17sp"
+                    android:textStyle="italic" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensedBold
+                    android:id="@+id/dob_candidate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_candidate"
+                    android:layout_toRightOf="@id/dob_title"
+                    android:textSize="18sp" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/sex_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dob_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/line_divider_center"
+                    android:text="Sex: "
+                    android:textSize="17sp"
+                    android:textStyle="italic" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensedBold
+                    android:id="@+id/sex_candidate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dob_title"
+                    android:layout_toRightOf="@id/dob_title"
+                    android:textSize="18sp" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/id_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sex_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/line_divider_center"
+                    android:text="ID: "
+                    android:textSize="17sp"
+                    android:textStyle="italic" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensedBold
+                    android:id="@+id/id_candidate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sex_title"
+                    android:layout_toRightOf="@id/dob_title" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/vote_number_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_candidate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/line_divider_center"
+                    android:text="Vote: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="italic"
+                    android:visibility="gone" />
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/vote_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_candidate"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/vote_number_title"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/line_divider_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/divider" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/candidate_info"
+                android:orientation="vertical">
+
+                <onworld.sbtn.views.MyTextRobotoCondensed
+                    android:id="@+id/candidate_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line_divider_bottom"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.libraries.cast.companionlibrary.widgets.MiniController
+            android:id="@+id/miniController1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+        </com.google.android.libraries.cast.companionlibrary.widgets.MiniController>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

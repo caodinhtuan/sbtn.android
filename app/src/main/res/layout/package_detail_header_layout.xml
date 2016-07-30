@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/package_layout_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="3dp"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background"
+        android:orientation="vertical">
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/package_detail_header_value"
+            android:layout_width="@dimen/package_value_text"
+            android:layout_height="@dimen/package_value_text"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/text_circle_shape"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/detail_text_header"
+            android:visibility="gone"
+            tools:text="1000 USD" />
+
+        <onworld.sbtn.views.MyTextRobotoCondensedBold
+            android:id="@+id/package_detail_header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/package_detail_header_value"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/detail_text_header"
+            tools:text="Title"
+
+            />
+
+        <onworld.sbtn.views.MyTextRobotoCondensed
+            android:id="@+id/package_detail_header_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/package_detail_header_name"
+            android:layout_toRightOf="@+id/package_detail_header_value"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/package_text_description"
+            tools:text="Description" />
+
+        <Button
+            android:id="@+id/package_detail_header_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/package_detail_header_description"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:text="Buy" />
+
+        <EditText
+            android:id="@+id/package_detail_header_code"
+            android:layout_width="@dimen/package_edittext_code_space"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/package_detail_header_buy"
+            android:layout_below="@id/package_detail_header_description"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/package_detail_header_value"
+            android:background="@drawable/shape_border_main_color"
+            android:hint="Enter Code"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/textColorPrimary"
+            android:textSize="@dimen/detail_text_header" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/package_detail_header_child_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"></LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensedBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Contents Of Package"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/detail_text_header"
+        android:visibility="gone" />
+
+
+</LinearLayout>

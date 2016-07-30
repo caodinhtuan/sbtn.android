@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/round_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/navigation_drawer_panel"
+    android:orientation="horizontal">
+
+    <onworld.sbtn.views.MyTextRobotoCondensedBold
+        android:id="@+id/round_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="What's View Today"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+
+    <View
+        android:id="@+id/line_divider_vertical"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+    <ImageButton
+        android:id="@+id/round_btn_next"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_keyboard_arrow_right_white_24dp" />
+
+</LinearLayout>

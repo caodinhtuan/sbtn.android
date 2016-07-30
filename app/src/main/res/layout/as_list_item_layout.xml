@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@color/main_background"
+    android:orientation="horizontal">
+
+    <onworld.sbtn.views.FixedRatioQuaterNineFifteenImageView
+        android:id="@+id/thumbnail_home_grid_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/title_home_grid_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/thumbnail_home_grid_item"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/detail_text_title"
+        tools:text="Title" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensed
+        android:id="@+id/time_home_grid_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_home_grid_item"
+        android:layout_toRightOf="@id/thumbnail_home_grid_item"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/home_text_title"
+        android:visibility="gone" />
+
+    <onworld.sbtn.views.MyTextRobotoCondensed
+        android:id="@+id/day_home_grid_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_home_grid_item"
+        android:layout_toRightOf="@id/thumbnail_home_grid_item"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/home_text_title"
+        android:visibility="gone" />
+</RelativeLayout>
